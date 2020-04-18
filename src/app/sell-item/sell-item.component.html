@@ -1,0 +1,67 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">User Registration</h4>
+                        <p class="card-category">Complete your profile</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                
+                            <div class="row">
+                
+                
+                                <div class="form-group col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Item Code" type="text" [(ngModel)]="item.itemCode" name="itemCode">
+                                    </mat-form-field>
+                                </div>
+                
+                                <div class="form-group col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Item Name" type="text" [(ngModel)]="item.itemName" name="itemName">
+                                    </mat-form-field>
+                                </div>
+                
+                
+                
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Item Price" type="text" [(ngModel)]="item.itemPrice"
+                                            name="itemPrice">
+                                    </mat-form-field>
+                                </div>
+                
+                
+                
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Item Description" type="text" [(ngModel)]="item.itemDescription"
+                                            name="itemDescription">
+                                    </mat-form-field>
+                                </div>
+                
+                
+                                <button mat-raised-button type="submit" class="btn btn-success pull-right">Clear</button>
+                                <button mat-raised-button type="submit" class="btn btn-success pull-right"
+                                    (click)="addItem()">Add</button>
+                
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

@@ -2,6 +2,9 @@ import { AdminProfileComponent } from './../../user-profile/admin-profile/admin-
 import { PatientProfileComponent } from './../../user-profile/patient-profile/patient-profile.component';
 import { StartShoppingComponent } from './../../start-shopping/start-shopping.component';
 import { UserLoginComponent } from './../../user-profile/user-login/user-login.component';
+import { SellItemComponent } from './../../sell-item/sell-item.component';
+import { ShoppingCartComponent } from './../../shopping-cart/shopping-cart.component';
+import { ShoppingCheckoutComponent } from './.././../shopping-checkout/shopping-checkout.component';
 
 
 
@@ -55,7 +58,10 @@ import {MatSelectModule} from '@angular/material/select';
     PatientProfileComponent,
     AdminProfileComponent,
     StartShoppingComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    SellItemComponent,
+    ShoppingCartComponent,
+    ShoppingCheckoutComponent
   ]
 })
 

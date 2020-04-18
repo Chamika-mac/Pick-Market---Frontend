@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Item } from './../model/item';
 import { ToastrService } from 'ngx-toastr';
 import { ItemService } from './../service/item.service';
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartShoppingComponent implements OnInit {
 
-  constructor(private itemService: ItemService, private toastr: ToastrService) { }
+  constructor(private itemService: ItemService, private toastr: ToastrService, private router: Router) { }
 
   item: Item = {
     itemCode: '',
@@ -19,6 +20,8 @@ export class StartShoppingComponent implements OnInit {
     itemPrice: '',
     itemDescription: '',
   }
+
+  ItemsArray = [];
 
   ngOnInit(): void {
     this.getAllItems();
@@ -28,14 +31,16 @@ export class StartShoppingComponent implements OnInit {
   getAllItems() {
     this.itemService.getAllItems().subscribe((data: any) => {
       console.log(data);
-
-      this.item.itemCode = data.itemCode;
-      this.item.itemName = data.itemName;
-      this.item.itemPrice = data.itemPrice;
-      this.item.itemDescription = data.itemDescription;
+      this.ItemsArray = data;
 
       this.toastr.success("Item Table Loaded Successfully");
     });
+  }
+
+  addToCart() {
+    // this.itemService.itemAddToCart = this.ItemsArray[0];
+    // this.toastr.success("Item Added to cart Successfully");
+    this.router.navigate(['shopping-cart']);
   }
 
 

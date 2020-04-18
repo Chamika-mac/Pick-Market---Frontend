@@ -1,3 +1,4 @@
+import { Item } from './../model/item';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -14,8 +15,21 @@ export class ItemService {
 
   url = 'http://localhost:8083/';
 
+  itemAddToCart = [];
+  itemCode: string = "ABC011";
+
   //Get all idems
   getAllItems() {
     return this.http.get(this.url + 'item/getAll');
+  }
+
+  //Add item
+  addItem(item: Item) {
+    return this.http.post(this.url + 'item/newItem', JSON.stringify(item), headeroption);
+  }
+
+  //get item by item ID
+  getItemById() {
+    return this.http.get(this.url + 'item/' + this.itemCode);
   }
 }
