@@ -10,12 +10,13 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
     { path: '/user-profile', title: 'Login or Register',  icon:'group_add', class: '' },
-    { path: '/notifications', title: 'Appointments',  icon:'assignment_turned_in', class: '' },
-    { path: '/table-list', title: 'Payments',  icon:'local_atm', class: '' },
-    { path: '/typography', title: 'Find Phisician',  icon:'account_circle', class: '' },
-    { path: '/icons', title: 'Find Hospital',  icon:'local_hospital', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
+    { path: '/start-shopping', title: 'Start Shopping',  icon:'assignment_turned_in', class: '' },
+    // { path: '/notifications', title: 'Start Shopping',  icon:'assignment_turned_in', class: '' },
+    { path: '/table-list', title: 'Sell Item',  icon:'local_atm', class: '' },
+    { path: '/typography', title: 'Shopping Cart',  icon:'account_circle', class: '' },
+    { path: '/icons', title: 'Checkout',  icon:'local_hospital', class: '' },
+    { path: '/maps', title: 'Payments',  icon:'location_on', class: '' },
+    { path: '/notifications', title: 'Shipping',  icon:'notifications', class: '' },
     { path: '/upgrade', title: 'LogOut',  icon:'unarchive', class: 'active-pro' },
 ];
 

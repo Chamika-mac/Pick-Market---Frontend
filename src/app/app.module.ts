@@ -24,6 +24,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 import { AgmCoreModule } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,

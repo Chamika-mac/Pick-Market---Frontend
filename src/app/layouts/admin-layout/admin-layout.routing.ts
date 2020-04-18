@@ -1,7 +1,9 @@
-import { HospitalProfileComponent } from './../../user-profile/hospital-profile/hospital-profile.component';
 import { AdminProfileComponent } from './../../user-profile/admin-profile/admin-profile.component';
-import { DoctorProfileComponent } from './../../user-profile/doctor-profile/doctor-profile.component';
 import { PatientProfileComponent } from './../../user-profile/patient-profile/patient-profile.component';
+import { StartShoppingComponent } from './../../start-shopping/start-shopping.component';
+import { UserLoginComponent } from './../../user-profile/user-login/user-login.component';
+
+
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../dashboard/dashboard.component';
@@ -64,13 +66,14 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps', component: MapsComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'upgrade', component: UpgradeComponent },
+    { path: 'start-shopping', component: StartShoppingComponent },
+
     { path: 'user-profile', component: UserProfileComponent,
         children: [
             { path: '', redirectTo: 'user', pathMatch: 'full' },
             { path: 'user', component: PatientProfileComponent },
-            { path: 'doctor', component: DoctorProfileComponent },
             { path: 'admin', component: AdminProfileComponent },
-            { path: 'hospital', component: HospitalProfileComponent }
+            { path: 'login', component: UserLoginComponent },
 
         ]    
 }

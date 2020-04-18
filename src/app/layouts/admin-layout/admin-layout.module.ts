@@ -1,7 +1,9 @@
-import { HospitalProfileComponent } from './../../user-profile/hospital-profile/hospital-profile.component';
 import { AdminProfileComponent } from './../../user-profile/admin-profile/admin-profile.component';
-import { DoctorProfileComponent } from './../../user-profile/doctor-profile/doctor-profile.component';
 import { PatientProfileComponent } from './../../user-profile/patient-profile/patient-profile.component';
+import { StartShoppingComponent } from './../../start-shopping/start-shopping.component';
+import { UserLoginComponent } from './../../user-profile/user-login/user-login.component';
+
+
 
 import { HttpClientModule } from "@angular/common/http";
 
@@ -51,9 +53,9 @@ import {MatSelectModule} from '@angular/material/select';
     UpgradeComponent,
 
     PatientProfileComponent,
-    DoctorProfileComponent,
     AdminProfileComponent,
-    HospitalProfileComponent
+    StartShoppingComponent,
+    UserLoginComponent
   ]
 })
 

@@ -14,17 +14,19 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://localhost:9090/HealthCare2/services/';
+  url = 'http://localhost:8083/';
 
   user: Observable<User[]>;
 
-  //Testing
-  test() {
-    return this.http.get(this.url + 'user/test');
-  }
+  username: string;
 
   //Add a new member
   save(user: User) {
-    return this.http.post(this.url + 'user/create', JSON.stringify(user), headeroption);
+    return this.http.post(this.url + 'user/newUser', JSON.stringify(user), headeroption);
+  }
+
+  //get user login details
+  userLogin() {
+    return this.http.get(this.url + 'user/' + this.username);
   }
 }
